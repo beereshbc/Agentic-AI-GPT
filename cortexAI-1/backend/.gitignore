@@ -1,0 +1,314 @@
+
+##################################################
+# CORTEXAI - BACKEND GLOBAL GITIGNORE
+# Applies to gateway and all nested microservices
+##################################################
+
+
+# ================================================
+# 1. ENVIRONMENT VARIABLES & SECRETS
+# ================================================
+
+.env
+.env.*
+!.env.example
+!.env.template
+!.env.sample
+
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+secrets/
+credentials/
+*.secret
+*.credentials
+secrets.json
+credentials.json
+
+.aws/
+aws-credentials
+aws-config
+
+service-account*.json
+firebase-adminsdk*.json
+
+
+# ================================================
+# 2. NODE.JS / EXPRESS / MICROSERVICES
+# ================================================
+
+node_modules/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.npm-cache/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+
+*.tsbuildinfo
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+
+# Framework caches
+.cache/
+.turbo/
+.parcel-cache/
+.vite/
+.next/
+.nuxt/
+.output/
+
+# Runtime files
+*.pid
+*.pid.lock
+*.seed
+
+
+# ================================================
+# 3. PYTHON / FASTAPI / AI MICROSERVICES
+# ================================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.Python
+venv/
+.venv/
+env/
+ENV/
+python_env/
+
+pip-wheel-metadata/
+*.egg-info/
+.eggs/
+wheels/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+
+.ipynb_checkpoints/
+.python-version
+
+
+# ================================================
+# 4. AI / LLM / MACHINE LEARNING
+# ================================================
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.h5
+*.keras
+*.gguf
+*.model
+
+models/
+checkpoints/
+weights/
+
+# Hugging Face
+.cache/huggingface/
+huggingface_cache/
+
+# ML experiments
+mlruns/
+wandb/
+runs/
+lightning_logs/
+
+# Vector databases
+chroma_db/
+chroma/
+faiss_index/
+vector_store/
+vector_db/
+qdrant_storage/
+lancedb/
+
+# AI temporary artifacts
+*.embedding
+*.embeddings
+
+
+# ================================================
+# 5. DATABASES / STORAGE
+# ================================================
+
+# MongoDB
+mongodb/
+mongo-data/
+mongodata/
+*.bson
+*.wt
+
+# Database dumps and backups
+dump/
+dumps/
+backups/
+*.dump
+*.sql.gz
+
+# PostgreSQL
+pgdata/
+postgres-data/
+
+# Redis
+redis-data/
+*.rdb
+appendonly.aof
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+
+# ================================================
+# 6. DOCKER / CONTAINERS
+# ================================================
+
+docker-data/
+docker-volumes/
+volumes/
+
+docker-compose.override.yml
+docker-compose.local.yml
+
+# Keep Dockerfiles and normal compose files tracked!
+
+
+# ================================================
+# 7. LOGS / TEMPORARY FILES
+# ================================================
+
+logs/
+log/
+*.log
+
+tmp/
+temp/
+.temp/
+*.tmp
+*.bak
+*.swp
+*.swo
+
+
+# ================================================
+# 8. UPLOADS / GENERATED FILES
+# ================================================
+
+uploads/*
+!uploads/.gitkeep
+
+generated/
+artifacts/
+
+# Large generated files
+*.zip
+*.rar
+*.7z
+
+# Remove this rule if backend PDFs are source documents
+# *.pdf
+
+
+# ================================================
+# 9. TESTING / AUTOMATION
+# ================================================
+
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+
+# ================================================
+# 10. AWS / CLOUD / INFRASTRUCTURE
+# ================================================
+
+.aws-sam/
+.serverless/
+cdk.out/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+
+
+# ================================================
+# 11. IDE / EDITOR
+# ================================================
+
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+.idea/
+*.iml
+.vs/
+
+# Vim
+*.swp
+*.swo
+
+
+# ================================================
+# 12. OPERATING SYSTEM
+# ================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.Trashes/
+.fseventsd/
+.Spotlight-V100/
+
+
+# ================================================
+# 13. LOCAL DEVELOPMENT CONFIGURATION
+# ================================================
+
+.local/
+.local-data/
+
+config/local.*
+config/development.local.*
+config/production.local.*
+
+
+##################################################
+# END OF CORTEXAI BACKEND GITIGNORE
+##################################################
