@@ -312,3 +312,8 @@ config/production.local.*
 ##################################################
 # END OF CORTEXAI BACKEND GITIGNORE
 ##################################################
+# Firebase / Google Cloud credentials
+**/serviceAccountKey.json
+**/*service-account*.json
+serviceAccountKey.json
+**/serviceAccountKey.json
